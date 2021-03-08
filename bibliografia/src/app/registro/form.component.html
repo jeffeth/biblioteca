@@ -1,0 +1,117 @@
+ <!--main content start-->
+ <section id="main-content">
+   <section class="wrapper">
+     <!-- page start-->
+     <div class="row">
+
+       <div class="col-lg-12">
+         <section class="panel panel-primary">
+<button [routerLink]="['/registro']" class="btn btn-default"><i class="icon-long-arrow-left"></i>Regresar</button>
+<br>
+<br>
+           <header class="panel-heading">
+            Registrar bibliografía
+           </header>
+           <div class="panel-body">
+
+              <div class=" form">
+                <form class="cmxform form-horizontal tasi-form" (ngSubmit) = "create()">
+                    <div class="form-group ">
+                      <label for="asignatura" class="control-label col-lg-2">Asignatura</label>
+                      <div class="col-lg-10">
+                        <select class="form-control" name="asignatura" id="tipoRecurso"
+                          [(ngModel)] = "libro.asignatura">
+                        <option *ngFor = "let asignaturas of asignatura" [ngValue]="asignaturas"> {{asignaturas.nombre}} </option>
+
+                        </select>
+                      </div>
+                    </div>
+                  <div class="form-group ">
+                    <label for="autor" class="control-label col-lg-2">Autor</label>
+                    <div class="col-lg-10">
+                      <input class=" form-control" id="nombre" name="nombre" [(ngModel)] = "libro.autor" />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="year" class="control-label col-lg-2">Año</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="year" type="date" name="year" [(ngModel)] = "libro.year" />
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="titulo" class="control-label col-lg-2">Titulo</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="titulo" type="text" name="titulo" [(ngModel)] = "libro.titulo" />
+                    </div>
+                  </div>
+                    <div class="form-group ">
+                      <label for="numeroEdicion" class="control-label col-lg-2">Número de edición</label>
+                      <div class="col-lg-10">
+                        <input class="form-control " id="numeroEdicion" type="number" name="numeroEdicion"
+                          [(ngModel)]="libro.numeroEdicion" />
+                      </div>
+                    </div>
+                        <div class="form-group ">
+                          <label for="editorial" class="control-label col-lg-2">Editorial</label>
+                          <div class="col-lg-10">
+                            <input class="form-control " id="editorial" type="text" name="editorial" [(ngModel)] = "libro.editorial" />
+                          </div>
+                        </div>
+
+                          <div class="form-group ">
+                            <label for="serie" class="control-label col-lg-2">Serie o numero</label>
+                            <div class="col-lg-10">
+                              <input class="form-control " id="serie" type="text" name="serie" [(ngModel)] = "libro.serie" />
+                            </div>
+                          </div>
+
+                            <div class="form-group ">
+                              <label for="url" class="control-label col-lg-2">Url</label>
+                              <div class="col-lg-10">
+                                <input class="form-control " id="url" type="url" name="url" [(ngModel)] = "libro.url" />
+                              </div>
+                            </div>
+                              <div class="form-group ">
+                                <label for="curl" class="control-label col-lg-2">Tipo de recurso</label>
+                                <div class="col-lg-10">
+                                  <select class="form-control" name="tipoRecurso" id="tipoRecurso" [(ngModel)] = "libro.tipoRecurso">
+
+                                    <option value="1">Libro</option>
+                                    <option value="2">Tesis</option>
+                                    <option value="3">Revista</option>
+                                    <option value="4">Capitulo de libro</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                                <div class="form-group ">
+                                  <label for="sugerencias" class="control-label col-lg-2">Sugerencia de libros</label>
+                                  <div class="col-lg-10">
+                                    <input class="form-control " id="sugerencias" type="text" name="sugerencias" [(ngModel)] = "libro.sugerencias" />
+                                  </div>
+                                </div>
+                                  <div class="form-group ">
+                                    <label for="observaciones" class="control-label col-lg-2">Observaciones</label>
+                                    <div class="col-lg-10">
+                                      <input class="form-control " id="observaciones" type="text" name="observaciones" [(ngModel)] = "libro.observaciones" />
+                                    </div>
+                                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                      <button class="btn btn-danger" type="submit">Guardar</button>
+                      <button class="btn btn-default" type="button">Cancelar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+
+             </div>
+             </section>
+             </div>
+             </div>
+
+             <!-- page end-->
+             </section>
+             </section>
+             <!--main content end-->

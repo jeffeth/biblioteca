@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Registro } from './registro';
+import { RegistroService } from './registro.service';
+
+
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
+  libros: Registro[];
+  constructor(private registroService: RegistroService) { }
 
   ngOnInit(): void {
+     this.registroService.getLibros().subscribe(
+       libro => this.libros = libro
+     );
   }
 
 }

@@ -1,12 +1,12 @@
 <!--header start-->
-<header class="header white-bg">
+<header class="header white-bg" style="background-color: #2A3542; color: white;">
   <div class="sidebar-toggle-box">
     <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
   </div>
   <!--logo start-->
-  <a href="index.html" class="logo">Flat<span>lab</span></a>
+  <a href="index.html" class="logo" style="color: white;">Biblio<span>grafías</span></a>
   <!--logo end-->
-  <div class="nav notify-row" id="top_menu">
+  <div class="nav notify-row" id="top_menu" style="background-color: black;">
     <!--  notification start -->
     <ul class="nav top-menu">
 
@@ -41,13 +41,18 @@
      <!-- sidebar menu start-->
      <ul class="sidebar-menu" id="nav-accordion">
        <li>
-         <a href="index.html">
+         <a [routerLink]="['/registro']">
            <i class="icon-dashboard"></i>
-           <span>Registrar</span>
+           <span >Bibliografías</span>
          </a>
        </li>
 
-
+<li>
+  <a [routerLink]="['/asignatura']">
+    <i class="icon-dashboard"></i>
+    <span>Asignaturas</span>
+  </a>
+</li>
 
 
 
